@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Proxy</title></head>
+<body>
+<h1>Proxy</h1>
+
+<script>
+const user = { nama: "Ali" };
+const proxy = new Proxy(user, {
+  get(target, prop) {
+    return prop in target ? target[prop] : "Tidak ada";
+  }
+});
+console.log(proxy.umur);
+</script>
+</body>
+</html>
